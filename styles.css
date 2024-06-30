@@ -3,5 +3,108 @@
     Class: Web Dev 1
     Date: 6/29/2024
 */
+:root {
+    --primary: #c91b13ff;
+    --secondary: #ffc600ff;
+    --lightAccent: #006fbfff;
+    --lightAccentBlur: rgba(0, 111, 191, 0.39);
+    --darkAccent: #0a50b7ff;
+    --text: #2E394B;
+}
+
+/*Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2E394B;
+    background-color: var(--lightAccentBlur);
+}
 
 
+
+/*Phone Styles width < 480px */
+@media only screen and (max-width: 480px) {
+    body {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        
+    }
+
+    header {
+        padding: 20px 5px 20px 5px;
+        width: 100%;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo {
+        width: 60px;
+        display: relative;
+        margin-left: 10px;
+    }
+
+    header .menu {
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    header .menu li {
+        display: inline;
+        margin-right: 20px;
+        list-style-type: none;
+    }
+
+    header .menu li a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+
+    }
+
+    body section {
+        display: relative;
+        text-align: center;
+        margin: 10px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    section img {
+        max-height: 125px;
+        margin: 8px -2.5px 0 -2.5px;
+        padding: 0;
+    }
+
+    section ul {
+        list-style-type: none;
+    }
+
+    #About {
+        background-color: var(--primary);
+    }
+
+
+    #Attractions {
+        background-color: var(--secondary);
+    }
+
+
+    #Hotels {
+        background-color: var(--primary);
+    }
+}
+
+/*Phone Styles 2 min width = 480px */
+
+/*Tablet Styles min width = 768px */
+
+
+/*Desktop Styles min width = 1025px */
