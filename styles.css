@@ -12,74 +12,95 @@
     --text: #2E394B;
 }
 
-/*Common Styles */
+/*Common Theme Styles*/
 * {
     margin: 0;
     padding: 0;
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #2E394B;
     background-color: var(--lightAccentBlur);
 }
 
-
-
 /*Phone Styles width < 480px */
 @media only screen and (max-width: 480px) {
-    body {
-        display: block;
-        align-items: center;
-        justify-content: center;
-        padding-top: 100px;
-        
+    .standardHeader {
+        display: none;
     }
 
-    header {
-        padding: 20px 5px 20px 5px;
-        width: 100%;
+    .mobileHeader {
         background-color: var(--primary);
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    header .logo {
-        width: 60px;
-        display: relative;
-        margin-left: 10px;
+    .mobileHeader img {
+        width: 65px;
+        margin: 15px;
     }
 
-    header .menu {
-        text-decoration: none;
-        margin-right: 10px;
+    .mobileNav .dropdown {
+        overflow: hidden;
+        margin-right: 40px;
     }
 
-    header .menu li {
-        display: inline;
-        margin-right: 20px;
-        list-style-type: none;
-    }
-
-    header .menu li a {
-        text-decoration: none;
-        color: var(--text);
+    .mobileNav .dropdown .dropbtn {
+        font-size: 16px;
         font-weight: 600;
-
+        border: solid 2px var(--text);
+        border-radius: 8px;
+        outline: none;
+        color: var(--text);
+        padding: 5px 8px;
+        background-color: inherit;
+        font-family: inherit;
     }
 
-    body section {
+    .mobileNav a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: var(--darkAccent);
+        color: white;
+    }
+
+    .mobileNav .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--lightAccent);
+        min-width: 80px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .mobileNav .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .mobileNav .dropdown-content a:hover {
+        background-color: var(--darkAccent);
+    }
+
+    .mobileNav .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    section {
         display: relative;
         text-align: center;
         margin: 10px;
-        padding: 8px;
+        padding: 5% 20%;
         border-radius: 10px;
     }
 
     section img {
-        max-height: 125px;
-        margin: 8px -2.5px 0 -2.5px;
+        max-width: 250px;
         padding: 0;
     }
 
@@ -88,23 +109,116 @@ body {
     }
 
     #About {
-        background-color: var(--primary);
-    }
-
-
-    #Attractions {
         background-color: var(--secondary);
     }
 
-
-    #Hotels {
+    #Attractions {
         background-color: var(--primary);
     }
+
+    #Hotels {
+        background-color: var(--secondary);
+    }
 }
-
-/*Phone Styles 2 min width = 480px */
-
-/*Tablet Styles min width = 768px */
+/*Phone styles width > 480px */
+@media only screen and (min-width: 481px) {
 
 
-/*Desktop Styles min width = 1025px */
+    .standardHeader {
+        display: none;
+    }
+
+    .mobileHeader {
+        background-color: var(--primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobileHeader img {
+        width: 100px;
+        margin: 15px;
+    }
+
+    .mobileHeader h1 {
+        font-size: 45px;
+    }
+
+    .mobileNav .dropdown {
+        overflow: hidden;
+        margin-right: 40px;
+    }
+
+    .mobileNav .dropdown .dropbtn {
+        font-size: 20px;
+        font-weight: 600;
+        border: solid 2px var(--text);
+        border-radius: 8px;
+        outline: none;
+        color: var(--text);
+        padding: 5px 8px;
+        background-color: inherit;
+        font-family: inherit;
+    }
+
+    .mobileNav a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: var(--darkAccent);
+        color: white;
+    }
+
+    .mobileNav .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--lightAccent);
+        min-width: 80px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .mobileNav .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .mobileNav .dropdown-content a:hover {
+        background-color: var(--darkAccent);
+    }
+
+    .mobileNav .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    section {
+        display: relative;
+        text-align: center;
+        margin: 10px;
+        padding: 5% 20%;
+        border-radius: 10px;
+    }
+
+    section img {
+        max-width: 250px;
+        padding: 0;
+    }
+
+    section ul {
+        list-style-type: none;
+    }
+
+    #About {
+        background-color: var(--secondary);
+    }
+
+    #Attractions {
+        background-color: var(--primary);
+    }
+
+    #Hotels {
+        background-color: var(--secondary);
+    }
+}

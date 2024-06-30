@@ -17,24 +17,41 @@
 
 <body>
     <!--Header-->
-    <header>
+    <header class="mobileHeader">
+        <img class="logo" src="icons/global.png" alt="globe">
+        <h1>GoGlobal</h1>
+        <!--Navigation Links-->
+        <nav class="mobileNav">
+            <div class="dropdown">
+                <button class="dropbtn">Menu
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="#About">About</a>
+                    <a href="#Attractions">Attractions</a>
+                    <a href="#Hotels">Hotels</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="standardHeader">
         <img class="logo" src="icons/global.png" alt="globe">
         <!--Navigation Links-->
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Attractions">Attractions</a></li>
-                <li><a href="#Hotels">Hotels</a></li>
-            </ul>
+        <nav class="StandardNav">
+                    <a href="index.html">Home</a>
+                    <a href="#About">About</a>
+                    <a href="#Attractions">Attractions</a>
+                    <a href="#Hotels">Hotels</a>
         </nav>
     </header>
     <!--Body-->
-   
+
     <section id="About">
         <h3>Granada, Spain</h3>
-        <p>Filled with history and culture, Granada Spain will take your breath away. 
-            From the towering heights of the ancient fortress of Alhambra, to the beautiful mountain views, 
+        <p>Filled with history and culture, Granada Spain will take your breath away.
+            From the towering heights of the ancient fortress of Alhambra, to the beautiful mountain views,
             Granada has everything you need for a one of a kind Vacation Destination.</p>
         <img src="images/TheViews.jpg" alt="The View">
         <img src="images/theArch.jpg" alt="The Arch">
@@ -53,7 +70,7 @@
             <li>Cordoba and its Mosque</li>
         </ul>
     </section>
-    
+
     <section id="Hotels">
         <h3>Hotels</h3>
         <p>There some amazing places to stay right in the heart of the city! Click the link below for more details!</p>
