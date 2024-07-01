@@ -25,7 +25,7 @@ body {
 }
 
 /*Phone Styles width < 480px */
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .standardHeader {
         display: none;
     }
@@ -120,8 +120,9 @@ body {
         background-color: var(--secondary);
     }
 }
+
 /*Phone styles width > 480px */
-@media only screen and (min-width: 481px) {
+@media screen and (min-width: 481px) {
 
 
     .standardHeader {
@@ -197,12 +198,17 @@ body {
         display: relative;
         text-align: center;
         margin: 10px;
-        padding: 5% 20%;
+        padding: 5%;
         border-radius: 10px;
     }
 
+    section h3 {
+        font-size: 35px;
+        margin-bottom: 2%;
+    }
+
     section img {
-        max-width: 250px;
+        max-height: 200px;
         padding: 0;
     }
 
@@ -220,5 +226,61 @@ body {
 
     #Hotels {
         background-color: var(--secondary);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobileHeader {
+        display: none;
+    }
+
+    .standardHeader {
+        background-color: var(--primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .standardHeader img {
+        height: 150px;
+        margin: 25px;
+    }
+
+    .standardHeader h1 {
+        font-size: 50px;
+    }
+
+    .standardHeader a {
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--text);
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
+
+    .standardHeader a:hover {
+        background-color: var(--lightAccent);
+        color: white;
+    }
+
+    section {
+        padding: 2%;
+        display: inline;
+        width: 44%;
+        margin: 1%;
+        float: left;
+    }
+    section h3{
+        font-size: 40px;
+    }
+    section img {
+        max-height: 100px;
+        float: top;
+    }
+
+    #Hotels {
+        width: 95%;
+        height: 100%;
+        margin-right: 10px;
     }
 }
